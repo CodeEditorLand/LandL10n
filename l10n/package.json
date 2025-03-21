@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"@types/mock-fs": "4.13.4",
 		"@types/node": "22",
-		"esbuild": "0.25.0",
+		"esbuild": "0.25.1",
 		"http-proxy-agent": "7.0.2",
 		"https-proxy-agent": "7.0.6",
 		"mock-fs": "5.5.0",
