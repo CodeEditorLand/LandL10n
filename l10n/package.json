@@ -1,7 +1,29 @@
 {
 	"name": "@codeeditorland/l10n",
+	"version": "0.0.1",
+	"private": false,
 	"description": "A helper library to assist in localizing subprocesses spun up by VS Code extensions",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandL10n.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
 	"sideEffects": false,
+	"type": "module",
 	"main": "./dist/main.js",
 	"browser": {
 		"./dist/main.js": "./dist/browser.js",
@@ -14,10 +36,11 @@
 	"scripts": {
 		"clean": "rimraf dist && rimraf lib",
 		"compile": "npm run clean && tsc --emitDeclarationOnly --outDir lib && node .esbuild.config.js",
-		"prepublishOnly": "npm run lint && npm run compile && npm run test"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {},
 	"devDependencies": {
+		"@playform/build": "0.2.1",
 		"@types/mock-fs": "4.13.4",
 		"@types/node": "22",
 		"esbuild": "0.25.1",
@@ -25,5 +48,8 @@
 		"https-proxy-agent": "7.0.6",
 		"mock-fs": "5.5.0",
 		"rimraf": "6.0.1"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

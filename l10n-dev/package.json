@@ -1,6 +1,28 @@
 {
 	"name": "@codeeditorland/l10n-dev",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Development time npm module to generate strings bundles from TypeScript files",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandL10n.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
+	"type": "module",
 	"main": "dist/main.js",
 	"types": "dist/main.d.ts",
 	"bin": {
@@ -15,7 +37,7 @@
 		"build-wasm-typescript": "tree-sitter build --wasm ./node_modules/tree-sitter-typescript/typescript --output ./src/ast/tree-sitter-typescript.wasm",
 		"clean": "rimraf dist && rimraf lib",
 		"compile": "npm run clean && tsc --emitDeclarationOnly --outDir lib && node .esbuild.config.mjs",
-		"prepublishOnly": "npm run lint && npm run compile && npm run test"
+		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
 	"dependencies": {
 		"debug": "4.4.0",
@@ -29,6 +51,7 @@
 		"yargs": "17.7.2"
 	},
 	"devDependencies": {
+		"@playform/build": "0.2.1",
 		"@types/debug": "4.1.12",
 		"@types/markdown-it": "14.1.2",
 		"@types/mock-fs": "4.13.4",
@@ -41,5 +64,8 @@
 		"rimraf": "6.0.1",
 		"tree-sitter-cli": "0.25.3",
 		"tree-sitter-typescript": "0.23.2"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
