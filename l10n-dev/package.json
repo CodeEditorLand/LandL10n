@@ -51,7 +51,7 @@
 		"yargs": "17.7.2"
 	},
 	"devDependencies": {
-		"@playform/build": "0.2.2",
+		"@playform/build": "0.2.3",
 		"@types/debug": "4.1.12",
 		"@types/markdown-it": "14.1.2",
 		"@types/mock-fs": "4.13.4",
