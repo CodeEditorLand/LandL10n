@@ -1,43 +1,14 @@
 {
-	"name": "@codeeditorland/l10n-dev",
-	"version": "0.0.1",
-	"private": false,
-	"description": "Development time npm module to generate strings bundles from TypeScript files",
-	"keywords": [
-		"codeeditorland",
-		"land",
-		"playform"
-	],
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n#readme",
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandL10n.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Source 🖋️ Open 👐🏻",
 		"email": "Source/Open@Editor.Land",
+		"name": "Source 🖋️ Open 👐🏻",
 		"url": "HTTPS://Editor.Land"
 	},
-	"type": "module",
-	"main": "dist/main.js",
-	"types": "dist/main.d.ts",
 	"bin": {
 		"vscode-l10n-dev": "./dist/cli.js"
 	},
-	"files": [
-		"dist/*"
-	],
-	"scripts": {
-		"build-wasm": "npm run build-wasm-typescript && npm run build-wasm-tsx",
-		"build-wasm-tsx": "tree-sitter build --wasm ./node_modules/tree-sitter-typescript/tsx --output ./src/ast/tree-sitter-tsx.wasm",
-		"build-wasm-typescript": "tree-sitter build --wasm ./node_modules/tree-sitter-typescript/typescript --output ./src/ast/tree-sitter-typescript.wasm",
-		"clean": "rimraf dist && rimraf lib",
-		"compile": "npm run clean && tsc --emitDeclarationOnly --outDir lib && node .esbuild.config.mjs",
-		"prepublishOnly": "Build 'Source/**/*.ts'"
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n/issues"
 	},
 	"dependencies": {
 		"debug": "4.4.0",
@@ -50,6 +21,7 @@
 		"xml2js": "0.6.2",
 		"yargs": "17.7.2"
 	},
+	"description": "Development time npm module to generate strings bundles from TypeScript files",
 	"devDependencies": {
 		"@playform/build": "0.2.3",
 		"@types/debug": "4.1.12",
@@ -65,7 +37,35 @@
 		"tree-sitter-cli": "0.25.3",
 		"tree-sitter-typescript": "0.23.2"
 	},
+	"files": [
+		"dist/*"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandL10n#readme",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "dist/main.js",
+	"name": "@codeeditorland/l10n-dev",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandL10n.git"
+	},
+	"scripts": {
+		"build-wasm": "npm run build-wasm-typescript && npm run build-wasm-tsx",
+		"build-wasm-tsx": "tree-sitter build --wasm ./node_modules/tree-sitter-typescript/tsx --output ./src/ast/tree-sitter-tsx.wasm",
+		"build-wasm-typescript": "tree-sitter build --wasm ./node_modules/tree-sitter-typescript/typescript --output ./src/ast/tree-sitter-typescript.wasm",
+		"clean": "rimraf dist && rimraf lib",
+		"compile": "npm run clean && tsc --emitDeclarationOnly --outDir lib && node .esbuild.config.mjs",
+		"prepublishOnly": "Build 'Source/**/*.ts'"
+	},
+	"type": "module",
+	"types": "dist/main.d.ts",
+	"version": "0.0.1"
 }
